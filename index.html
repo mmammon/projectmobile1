@@ -25,6 +25,14 @@
                         </ons-toolbar-button>
                       </div>
                 </ons-toolbar>
+            <ons-page>
+                        <p style="text-align: center; margin-top: 10px;">
+                          <ons-search-input
+                            placeholder="Search"
+                            onchange="ons.notification.alert('Searched for: ' + this.value)"
+                          ></ons-search-input>
+                        </p>
+                      </ons-page>
               
                 <ons-tabbar swipeable position="auto">
                   <ons-tab page="tab1.html" label="Tab 1" icon="ion-home, material:md-home" badge="7" active>
