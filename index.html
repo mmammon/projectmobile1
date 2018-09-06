@@ -49,14 +49,16 @@
             </p>
             <div>
                 <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
-                    <ons-carousel-item style="background:url('img/1.jpg')no-repeat center;background-size:contain; ">
 
+                    <ons-carousel-item id = "carousel1" style="background:url('img/1.jpg')no-repeat center;background-size:contain; ">
                     </ons-carousel-item>
-                    <ons-carousel-item style="background:url('img/2.jpg')no-repeat center;background-size:contain; ">
 
+                    <ons-carousel-item id = "carousel2" style="background:url('img/2.jpg')no-repeat center;background-size:contain; ">
                     </ons-carousel-item>
-                    <ons-carousel-item style="background:url('img/3.jpg')no-repeat center;background-size:contain; ">
+
+                    <ons-carousel-item id = "carousel3" style="background:url('img/3.jpg')no-repeat center;background-size:contain; ">
                     </ons-carousel-item>
+
                 </ons-carousel>
             </div>
 
@@ -317,6 +319,8 @@
         $.getJSON('home.json',function(data){
             console.log(data);
             $('#appname').html(data.appname);
+            var style = "background:url('img/"+data.slides[0]+"')no-repeat center;background-size:contain; '";
+            $('#carousel1').attr('style',style)
         });
     }
     function getCartData(){
