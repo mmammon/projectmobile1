@@ -23,7 +23,7 @@
                     <ons-icon size="40px" icon="md-shopping-basket"></ons-icon>
                 </ons-toolbar-button>
             </div>
-            <div class="center">Home</div>
+            <div class="center" id="appname">#</div>
 
             <div class="right">
                 <ons-toolbar-button>
@@ -196,7 +196,7 @@
                 }
 
                 .category_wrapper {
-                    max-width: 120px;
+                   
                     width: 90%;
                     margin: auto;
                     background-color: rgba(236, 104, 170, 0.925);
@@ -209,7 +209,7 @@
                 }
 
                 .category_wrapper2 {
-                    max-width: 120px;
+                  
                     width: 90%;
                     margin: auto;
                     background-color: rgba(235, 110, 151, 0.952);
@@ -222,7 +222,7 @@
                 }
 
                 .category_wrapper3 {
-                    max-width: 120px;
+                   
                     width: 90%;
                     margin: auto;
                     background-color: rgba(218, 86, 130, 0.938);
@@ -300,15 +300,30 @@
 
 <!-- /////////////// script ////////////////// -->
 <script>//java script toobar
+    getHomeData();
     document.addEventListener('prechange', function (event) {
        if(event.index == 0){
        console.log('Home clicked');
        //get data for home screen
+
        }else  if(event.index == 1){
         console.log('Cart clicked');
         //get data for cart screen
+        getCartData();
        }
     });
+
+    function getHomeData(){
+        $.getJSON('home.json',function(data){
+            console.log(data);
+            $('#appname').html(data.appname);
+        });
+    }
+    function getCartData(){
+        $.getJSON('cart.json',function(data){
+            console.log(data);
+        });
+}
     //---------------------------------------------
     var prev = function () {
         var carousel = document.getElementById('carousel');
