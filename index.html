@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
     <title>quiz</title>
 </head>
 
@@ -294,10 +297,17 @@
     </template>
 
 </body>
-<script>
+
+<!-- /////////////// script ////////////////// -->
+<script>//java script toobar
     document.addEventListener('prechange', function (event) {
-        document.querySelector('ons-toolbar .center')
-            .innerHTML = event.tabItem.getAttribute('label');
+       if(event.index == 0){
+       console.log('Home clicked');
+       //get data for home screen
+       }else  if(event.index == 1){
+        console.log('Cart clicked');
+        //get data for cart screen
+       }
     });
     //---------------------------------------------
     var prev = function () {
