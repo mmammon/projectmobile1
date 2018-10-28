@@ -1,56 +1,24 @@
-[debug] [2018-09-25T08:19:40.862Z] ----------------------------------------------------------------------
-[debug] [2018-09-25T08:19:40.864Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\STD\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-09-25T08:19:40.865Z] CLI Version:   4.2.1
-[debug] [2018-09-25T08:19:40.865Z] Platform:      win32
-[debug] [2018-09-25T08:19:40.865Z] Node Version:  v8.11.3
-[debug] [2018-09-25T08:19:40.865Z] Time:          Tue Sep 25 2018 15:19:40 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-09-25T08:19:40.865Z] ----------------------------------------------------------------------
+[debug] [2018-09-26T23:44:22.507Z] ----------------------------------------------------------------------
+[debug] [2018-09-26T23:44:22.511Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\STD\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-26T23:44:22.511Z] CLI Version:   4.2.1
+[debug] [2018-09-26T23:44:22.511Z] Platform:      win32
+[debug] [2018-09-26T23:44:22.511Z] Node Version:  v8.11.3
+[debug] [2018-09-26T23:44:22.511Z] Time:          Thu Sep 27 2018 06:44:22 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-09-26T23:44:22.511Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-09-25T08:19:40.875Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-09-25T08:19:40.876Z] > authorizing via signed-in user
-[debug] [2018-09-25T08:19:40.878Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-09-25T08:19:40.878Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
-
-[debug] [2018-09-25T08:19:41.217Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-25T08:19:41.272Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/shopee-77a26  
+[debug] [2018-09-26T23:44:22.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-26T23:44:22.522Z] > authorizing via signed-in user
+[debug] [2018-09-26T23:44:22.524Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mammon-c87f8  
  
-[debug] [2018-09-25T08:19:42.454Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-25T08:19:42.455Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shopee-77a26  
+[debug] [2018-09-26T23:44:23.635Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-26T23:44:23.635Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mammon-c87f8  
  
-[debug] [2018-09-25T08:19:43.825Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-26T23:44:34.635Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\977-341\QuizMobile1'...
 [info] 
-[debug] [2018-09-25T08:19:43.827Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/23415238409/clients/_:getWebAppConfig  
+[debug] [2018-09-26T23:44:34.638Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155140630032/clients/_:getWebAppConfig  
  
-[debug] [2018-09-25T08:19:44.450Z] <<< HTTP RESPONSE 200
-[info] i  hosting[shopee-77a26]: Serving hosting files from: public
-[info] +  hosting[shopee-77a26]: Local server: http://localhost:5000
-[debug] [2018-09-27T05:30:08.610Z] ----------------------------------------------------------------------
-[debug] [2018-09-27T05:30:08.613Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\STD\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-09-27T05:30:08.613Z] CLI Version:   4.2.1
-[debug] [2018-09-27T05:30:08.613Z] Platform:      win32
-[debug] [2018-09-27T05:30:08.613Z] Node Version:  v8.11.3
-[debug] [2018-09-27T05:30:08.614Z] Time:          Thu Sep 27 2018 12:30:08 GMT+0700 (SE Asia Standard Time)
-[debug] [2018-09-27T05:30:08.614Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-09-27T05:30:08.648Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-09-27T05:30:08.650Z] > authorizing via signed-in user
-[debug] [2018-09-27T05:30:08.652Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-09-27T05:30:08.652Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
-
-[debug] [2018-09-27T05:30:09.004Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-27T05:30:09.034Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/shopee-77a26  
- 
-[debug] [2018-09-27T05:30:10.220Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-27T05:30:10.221Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shopee-77a26  
- 
-[debug] [2018-09-27T05:30:11.595Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'D:\977-341\QuizMobile1'...
-[info] 
-[debug] [2018-09-27T05:30:11.598Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/23415238409/clients/_:getWebAppConfig  
- 
-[debug] [2018-09-27T05:30:12.119Z] <<< HTTP RESPONSE 200
-[info] i  hosting[shopee-77a26]: Serving hosting files from: public
-[info] +  hosting[shopee-77a26]: Local server: http://localhost:5000
+[debug] [2018-09-26T23:44:35.206Z] <<< HTTP RESPONSE 200
+[info] i  hosting[mammon-c87f8]: Serving hosting files from: public
+[info] +  hosting[mammon-c87f8]: Local server: http://localhost:5000
