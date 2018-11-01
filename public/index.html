@@ -61,9 +61,9 @@
       </ons-toolbar>
 
       <ons-tabbar swipeable position="auto" id="tabbar">
-        <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" >
+        <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Cart" icon="md-shopping-cart" active-icon="md-shopping-cart" badge="7" active>
+        <ons-tab page="tab2.html" label="Cart" icon="md-shopping-cart" active-icon="md-shopping-cart">
         </ons-tab>
         <ons-tab page="tab3.html" label="product" icon="md-shopping-cart" active-icon="md-shopping-cart">
         </ons-tab>
@@ -132,7 +132,7 @@
         }
         .thumbnail ons-icon {
           font-size: 70px;
-          color: rgba(190, 190, 190, 0.74);
+          color: rgba(161, 249, 255, 0.74);
           display: table-cell;
           vertical-align: middle !important;
         }
@@ -174,7 +174,7 @@
         .category_wrapper1 {
           width: 90%;
           margin: auto;
-          background-color: rgba(100, 100, 100, 0.747);
+          background-color: rgba(236, 8, 8, 0.747);
         }
         .category_wrapper1 ons-icon {
           font-size: 55px;
@@ -215,10 +215,10 @@
                       %>
             <ons-list-item>
                 <div class="left">
-                    <img class="list-item__thumbnail" src="<%= cart.photo %>">
+                    <img class="list-item__thumbnail" src="<%= cart.pic %>">
                 </div>
                 <div class="center">
-                    <span class="list-item__title"><%= cart.itemname %></span>
+                    <span class="list-item__title"><%= cart.title %></span>
                     <span class="list-item__subtitle" style="color: blue;"><%= cart.price %></span>
                 </div>
                 <div class="right">
@@ -249,6 +249,7 @@
           %>
 <ons-col width="33%" >
   <ons-card onclick="detail('<%- products.pid %>')">
+    <img class="" src="<%= products.pic %>" width="99%"height="70px">
         <br>
 <%= products.Category %><br>
 <%= products.title %><br>
@@ -283,16 +284,11 @@
           <div class="title">
             <%= data.price%>
           </div>
-          <div class="content">
+          <div class="content" style="color: white;">
             <div>
               <%= data.title %>
             </div>
-            <ons-list>
-              <ons-list-header>Bindings</ons-list-header>
-              <ons-list-item>Vue</ons-list-item>
-              <ons-list-item>Angular</ons-list-item>
-              <ons-list-item>React</ons-list-item>
-            </ons-list>
+
           </div>
           <ons-button onclick="addtocart('<%= data.pid %>')">ADD TO CART</ons-button>
           <%})%>
