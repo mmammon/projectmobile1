@@ -408,7 +408,7 @@
   function getproductData(name) {
     console.log(name);
     if (name == null) {
-      db.collection("PRODUCTS").get()
+      db.collection("PRODUCT").get()
         .then(function (querySnapshot) {
           // doc.data() is never undefined for query doc snapshots
           var product_template = $('#product_template').html();
@@ -420,11 +420,11 @@
           console.log("Error getting documents: ", error);
         });
     } else {
-      db.collection("PRODUCTS").where("category", "==",name).get()
+      db.collection("PRODUCT").where("category", "==",name).get()
         .then(function (querySnapshot) {console.log(querySnapshot.docs);
           if (querySnapshot.docs.length == 0) {
             var html = "ไม่มีสินค้าที่คุณเลือก"
-            db.collection("PRODUCTS").get()
+            db.collection("PRODUCT").get()
               .then(function (querySnapshot) {
                 // doc.data() is never undefined for query doc snapshots
                 var product_template = $('#product_template').html();
@@ -436,7 +436,7 @@
                 console.log("Error getting documents: ", error);
               });
           } else {
-            db.collection("PRODUCTS").where("category", "==", name).get()
+            db.collection("PRODUCT").where("category", "==", name).get()
               .then(function (querySnapshot) {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(querySnapshot.docs);
@@ -472,7 +472,7 @@
   }
   function showdetail() {
     var id = localStorage.getItem('id');
-    db.collection("PRODUCTS").where("pid", "==", id).get()
+    db.collection("PRODUCT").where("pid", "==", id).get()
       .then(function (querySnapshot) {
         // doc.data() is never undefined for query doc snapshots
         console.log(querySnapshot.docs);
@@ -505,7 +505,7 @@ document.getElementById('tabbar').setActiveTab(2);
   const data = []
   function tatol() {
     console.log(search);
-    db.collection("PRODUCTS").get()
+    db.collection("PRODUCT").get()
       .then(function (querySnapshot) {
         querySnapshot.docs.forEach(function (item) {
           data.push(item)
@@ -538,7 +538,7 @@ console.log("888",title);
         $('#product').html(html);
   
 // console.log(tests)
-// db.collection("PRODUCTS").where("title", "==",tests).get()
+// db.collection("PRODUCT").where("title", "==",tests).get()
 //       .then(function (querySnapshot) {
 //         // doc.data() is never undefined for query doc snapshots
 //         console.log(querySnapshot.docs);
@@ -576,7 +576,7 @@ function getData2cart(){
   });
 var testnum = 0;
   dataCart.forEach(function(dataCart){
-    var apr = db.collection("PRODUCTS").where("pid","==",dataCart);
+    var apr = db.collection("PRODUCT").where("pid","==",dataCart);
     apr.get().then(function (querySnapshot) {
       console.log(querySnapshot.docs)
       var pic_template = $('#pic_template').html();
