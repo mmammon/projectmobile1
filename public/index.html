@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
   <script src="ejs.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
@@ -52,7 +53,8 @@
 
           </ons-toolbar-button>
         </div>
-        <div class="center" style="text-align:center" id="appname">#</div>
+        <div class="center" style="text-align:center; font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+          id="appname">#</div>
         <div class="right">
           <ons-toolbar-button>
             <ons-icon icon="md-help"></ons-icon>
@@ -61,13 +63,16 @@
       </ons-toolbar>
 
       <ons-tabbar swipeable position="auto" id="tabbar">
-        <ons-tab style="background: rgb(214, 239, 255);" page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab1.html" label="Home" icon="ion-home, material:md-home"
+          active>
         </ons-tab>
-        <ons-tab style="background: rgb(214, 239, 255);" page="tab2.html" label="Cart" icon="md-shopping-cart" active-icon="md-shopping-cart">
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab2.html" label="Cart" icon="md-shopping-cart"
+          active-icon="md-shopping-cart">
         </ons-tab>
-        <ons-tab style="background: rgb(214, 239, 255);" page="tab3.html" label="product" icon="md-shopping-cart" active-icon="md-shopping-cart">
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab3.html" label="product" icon="md-shopping-cart"
+          active-icon="md-shopping-cart">
         </ons-tab>
-       
+
       </ons-tabbar>
 
     </ons-page>
@@ -96,8 +101,8 @@
 
 
         <div id="icon"></div>
-        <script id="icon_template" type="text/template"> 
-                  <ons-row class="category" style="text-align:center">      
+        <script id="icon_template" type="text/template">
+          <ons-row class="category" style="text-align:center">      
                         <% categories.forEach(function(category){%>
                     <ons-col modifier="nodivider" id="  " onclick="changeTab('<%= category.name %>')"width="33%"value="<%= category.name %>">
                         <div class="category_wrapper">
@@ -117,51 +122,65 @@
       </div>
 
       <style type="text/css">
-      *{
-font-family: 'Times New Roman', Times, serif;
-      }
+        * {
+          font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+          background-color: rgb(152, 168, 182);
+        }
+
         .recomended_playlist {
           padding-left: 10px;
         }
+
         .recomended_playlist_title {
           font-size: 12px;
           font-weight: bold;
         }
+
         .thumbnail {
           width: 120px;
           height: 120px;
           display: table;
           background-color: rgba(0, 0, 0, 0.42);
         }
+
         .thumbnail ons-icon {
           font-size: 70px;
           color: rgba(161, 249, 255, 0.74);
           display: table-cell;
           vertical-align: middle !important;
         }
+
         .recomended_list {
           height: 150px;
         }
+
         .recomended {
           background: linear-gradient(rgb(208, 247, 211), #151715);
           padding-top: 44px;
         }
+
         .menu_list {
           background: transparent;
         }
+
         .menu_item {
           color: white;
           font-size: 12px;
         }
+
         .menu_item ons-icon {
           margin-right: 10px;
           color: white;
           font-size: 16px;
         }
+
         .category {
           margin: 20px 0px;
           padding: 0px 30px;
         }
+
         .category_wrapper {
           width: 90%;
           margin: auto;
@@ -169,35 +188,42 @@ font-family: 'Times New Roman', Times, serif;
           border: 5px solid;
           border-color: white;
         }
+
         .category_wrapper ons-icon {
           font-size: 55px;
           padding-top: 10px;
           line-height: 0.75em;
         }
+
         .category_wrapper1 {
           width: 90%;
           margin: auto;
           background-color: rgba(236, 8, 8, 0.747);
         }
+
         .category_wrapper1 ons-icon {
           font-size: 55px;
           padding-top: 10px;
           line-height: 0.75em;
         }
+
         .category_wrapper2 {
           width: 90%;
           margin: auto;
           background-color: rgba(201, 25, 25, 0.815);
         }
+
         .category_wrapper2 ons-icon {
           font-size: 55px;
           padding-top: 10px;
           line-height: 0.75em;
         }
+
         .category_thumbnail {
           display: inline-block;
           margin: 16px 0px;
         }
+
         .category_title {
           font-size: 12px;
           font-weight: bold;
@@ -209,11 +235,12 @@ font-family: 'Times New Roman', Times, serif;
 
   <template id="tab2.html">
     <ons-page id="Tab2">
-      <ons-list-header">SHOPPING CART</ons-list-header>
+      <br>
+      <ons-list-header>SHOPPING CART</ons-list-header>
 
       <div id="pic"></div>
-        <script id="pic_template" type="text/template"> 
-                    <% cart.forEach(function(cart){
+      <script id="pic_template" type="text/template">
+        <% cart.forEach(function(cart){
                       var cart=cart.data()
                       %>
             <ons-list-item>
@@ -234,7 +261,7 @@ font-family: 'Times New Roman', Times, serif;
         </Script>
       </div>
 
-
+      <br>
       <ons-button modifier="large" style="font-weight: bold;">PROCEED TO PAY</ons-button>
 
     </ons-page>
@@ -245,8 +272,8 @@ font-family: 'Times New Roman', Times, serif;
     <ons-page>
 
       <div id="product"></div>
-      <script id="product_template" type="text/template"> 
- <ons-row>
+      <script id="product_template" type="text/template">
+        <ons-row>
         <% product.forEach(function(product){
           var products = product.data();
           %>
@@ -255,8 +282,9 @@ font-family: 'Times New Roman', Times, serif;
     <img class="" src="<%= products.pic %>" width="99%"height="70px">
         <br>
         <div style="font-size:10px"> 
-<%= products.Category %><br>
+<div style="font-weight:bold;">
 <%= products.title %><br>
+</div>
 ฿<%= products.price %>
 </div>
   </ons-card></ons-col>
@@ -281,7 +309,7 @@ font-family: 'Times New Roman', Times, serif;
         <div class="center"></div>
       </ons-toolbar>
       <div id="detail"></div>
-      <script id="detail_template" type="text/template"> 
+      <script id="detail_template" type="text/template">
         <ons-card>
          
          <% detail.forEach(function(data){   
@@ -309,290 +337,316 @@ font-family: 'Times New Roman', Times, serif;
 
 
 
-<script>
-  var prev = function () {
-    var carousel = document.getElementById('carousel');
-    carousel.prev();
-  };
-  var next = function () {
-    var carousel = document.getElementById('carousel');
-    carousel.next();
-  };
-  ons.ready(function () {
-    var carousel = document.addEventListener('postchange', function (event) {
-      console.log('Changed to ' + event.activeIndex)
+  <script>
+    var prev = function () {
+      var carousel = document.getElementById('carousel');
+      carousel.prev();
+    };
+    var next = function () {
+      var carousel = document.getElementById('carousel');
+      carousel.next();
+    };
+    ons.ready(function () {
+      var carousel = document.addEventListener('postchange', function (event) {
+        console.log('Changed to ' + event.activeIndex)
+      });
     });
-  });</script>
-<script>
-  getHomeData()
-  tatol();
-  document.addEventListener('prechange', function (event) {
-    if (event.index == 0) {
-      console.log('Home click');
-      getHomeData()
+  </script>
+  <script>
+    getHomeData()
+    tatol();
+    document.addEventListener('prechange', function (event) {
+      if (event.index == 0) {
+        console.log('Home click');
+        getHomeData()
+      } else if (event.index == 1) {
+        console.log('Cart click');
+        getData2cart()
+      } else if (event.index == 2) {
+        console.log('Cart click');
+        var name = localStorage.getItem('name');
+        var items = localStorage.getItem('items');
+        if (name == null && items == null) {
+          getproductData()
+        } else if (name != null && items == null) {
+          getproductData(name)
+        } else if (name != null && items == null) {}
+      } else if (event.index == 3) {
+        var title = localStorage.getItem('title');
+        console.log('Cart click');
+        // test(title)
+      }
+      localStorage.clear();
+    });
+
+
+    function getHomeData() {
+      var docRef = db.collection("UI").doc("home");
+      docRef.get().then(function (doc) {
+        if (doc.exists) {
+          console.log("Document data:", doc.data());
+          var data = doc.data();
+          $('#appname').html(data.appname);
+          var style = "background: url('" + data.slides[0] + "')no-repeat center;background-size: contain;";
+          $('#carousel1').attr('style', style);
+          $('#icon1').attr('icon', data.categories[0].icon);
+          $('#Category_1_name').html(data.categories[0].name);
+          var icon_template = $('#icon_template').html();
+          var html = ejs.render(icon_template, {
+            categories: data.categories
+          });
+          $('#icon').html(html);
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      }).catch(function (error) {
+        console.log("Error getting document:", error);
+      });
+      // $.getJSON('home.json', function (data) {
+      //     console.log(data);
+      //    
+      //     var style = "background: url('" + data.slides[0] + "')no-repeat center;background-size: contain;";
+      //     $('#carousel1').attr('style', style);
+      //     $('#icon1').attr('icon', data.categories[0].icon);
+      //     $('#Category_1_name').html(data.categories[0].name);
+      //     var icon_template = $('#icon_template').html();
+      //     var html = ejs.render(icon_template, { categories: data.categories });
+      //     $('#icon').html(html);
+      // });
     }
-    else if (event.index == 1) {
-      console.log('Cart click');
-      getData2cart()
+
+    function getCartData() {
+      var docRef = db.collection("UI").doc("cart");
+      docRef.get().then(function (doc) {
+        if (doc.exists) {
+          console.log("Document data:", doc.data());
+          var data = doc.data();
+          // $('#photo').html(data.cart[0].photo);
+          // $('#price').html(data.cart[0].price); 
+          var pic_template = $('#pic_template').html();
+          var html = ejs.render(pic_template, {
+            cart: data.cart
+          });
+          $('#pic').html(html);
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      }).catch(function (error) {
+        console.log("Error getting document:", error);
+      });
+      // $.getJSON('cart.json', function (data) {
+      //     console.log(data);
+      // })
     }
-    else if (event.index == 2) {
-      console.log('Cart click');
-      var name = localStorage.getItem('name');
-      var items = localStorage.getItem('items');
-      if (name == null&&items==null) {
-        getproductData()
-      }
-      else if (name != null&&items==null){ getproductData(name) }
-      else if (name != null&&items==null){  }
-    }else if (event.index == 3) {
-      var title = localStorage.getItem('title');
-      console.log('Cart click');
-      // test(title)
-    }localStorage.clear();
-  });
- 
- 
-  function getHomeData() {
-    var docRef = db.collection("UI").doc("home");
-    docRef.get().then(function (doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-        var data = doc.data();
-        $('#appname').html(data.appname);
-        var style = "background: url('" + data.slides[0] + "')no-repeat center;background-size: contain;";
-        $('#carousel1').attr('style', style);
-        $('#icon1').attr('icon', data.categories[0].icon);
-        $('#Category_1_name').html(data.categories[0].name);
-        var icon_template = $('#icon_template').html();
-        var html = ejs.render(icon_template, { categories: data.categories });
-        $('#icon').html(html);
+
+    function getproductData(name) {
+      console.log(name);
+      if (name == null) {
+        db.collection("PRODUCT").get()
+          .then(function (querySnapshot) {
+            // doc.data() is never undefined for query doc snapshots
+            var product_template = $('#product_template').html();
+            console.log(querySnapshot.docs);
+            var html = ejs.render(product_template, {
+              product: querySnapshot.docs
+            });
+            $('#product').html(html);
+          })
+          .catch(function (error) {
+            console.log("Error getting documents: ", error);
+          });
       } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
+        db.collection("PRODUCT").where("category", "==", name).get()
+          .then(function (querySnapshot) {
+            console.log(querySnapshot.docs);
+            if (querySnapshot.docs.length == 0) {
+              var html = "No product for your search"
+              db.collection("PRODUCT").get()
+                .then(function (querySnapshot) {
+                  // doc.data() is never undefined for query doc snapshots
+                  var product_template = $('#product_template').html();
+                  console.log(querySnapshot.docs);
+                  html += ejs.render(product_template, {
+                    product: querySnapshot.docs
+                  });
+                  $('#product').html(html);
+                })
+                .catch(function (error) {
+                  console.log("Error getting documents: ", error);
+                });
+            } else {
+              db.collection("PRODUCT").where("category", "==", name).get()
+                .then(function (querySnapshot) {
+                  // doc.data() is never undefined for query doc snapshots
+                  console.log(querySnapshot.docs);
+                  var product_template = $('#product_template').html();
+                  var html = ejs.render(product_template, {
+                    product: querySnapshot.docs
+                  });
+                  $('#product').html(html);
+                })
+                .catch(function (error) {
+                  console.log("Error getting documents: ", error);
+                });
+            }
+            // doc.data() is never undefined for query doc snapshots
+            // var product_template = $('#product_template').html();
+            // console.log(querySnapshot.docs);
+            // var html = ejs.render(product_template, { product: querySnapshot.docs });
+            // $('#product').html(html);
+          })
       }
-    }).catch(function (error) {
-      console.log("Error getting document:", error);
-    });
-    // $.getJSON('home.json', function (data) {
-    //     console.log(data);
-    //    
-    //     var style = "background: url('" + data.slides[0] + "')no-repeat center;background-size: contain;";
-    //     $('#carousel1').attr('style', style);
-    //     $('#icon1').attr('icon', data.categories[0].icon);
-    //     $('#Category_1_name').html(data.categories[0].name);
-    //     var icon_template = $('#icon_template').html();
-    //     var html = ejs.render(icon_template, { categories: data.categories });
-    //     $('#icon').html(html);
-    // });
-  }
-  function getCartData() {
-    var docRef = db.collection("UI").doc("cart");
-    docRef.get().then(function (doc) {
-      if (doc.exists) {
-        console.log("Document data:", doc.data());
-        var data = doc.data();
-        // $('#photo').html(data.cart[0].photo);
-        // $('#price').html(data.cart[0].price); 
-        var pic_template = $('#pic_template').html();
-        var html = ejs.render(pic_template, { cart: data.cart });
-        $('#pic').html(html);
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    }).catch(function (error) {
-      console.log("Error getting document:", error);
-    });
-    // $.getJSON('cart.json', function (data) {
-    //     console.log(data);
-    // })
-  }
-  function getproductData(name) {
-    console.log(name);
-    if (name == null) {
-      db.collection("PRODUCT").get()
+    }
+
+    function changeTab(name) {
+      console.log(name)
+      document.getElementById('tabbar').setActiveTab(2);
+      localStorage.setItem('name', name);
+      // var name1 = localStorage.getItem('name');
+      //  getproductData(name1)
+    }
+
+    function detail(pid) {
+      localStorage.setItem('id', pid);
+      myNavigator.pushPage('tab4.html')
+      showdetail()
+      // var name1 = localStorage.getItem('name');
+      //  getproductData(name1)
+    }
+
+    function showdetail() {
+      var id = localStorage.getItem('id');
+      db.collection("PRODUCT").where("pid", "==", id).get()
         .then(function (querySnapshot) {
           // doc.data() is never undefined for query doc snapshots
-          var product_template = $('#product_template').html();
           console.log(querySnapshot.docs);
-          var html = ejs.render(product_template, { product: querySnapshot.docs });
-          $('#product').html(html);
+          var detail_template = $('#detail_template').html();
+          var html = ejs.render(detail_template, {
+            detail: querySnapshot.docs
+          });
+          $('#detail').html(html);
         })
         .catch(function (error) {
           console.log("Error getting documents: ", error);
         });
-    } else {
-      db.collection("PRODUCT").where("category", "==",name).get()
-        .then(function (querySnapshot) {console.log(querySnapshot.docs);
-          if (querySnapshot.docs.length == 0) {
-            var html = "No product for your search"
-            db.collection("PRODUCT").get()
-              .then(function (querySnapshot) {
-                // doc.data() is never undefined for query doc snapshots
-                var product_template = $('#product_template').html();
-                console.log(querySnapshot.docs);
-                html += ejs.render(product_template, { product: querySnapshot.docs });
-                $('#product').html(html);
-              })
-              .catch(function (error) {
-                console.log("Error getting documents: ", error);
-              });
-          } else {
-            db.collection("PRODUCT").where("category", "==", name).get()
-              .then(function (querySnapshot) {
-                // doc.data() is never undefined for query doc snapshots
-                console.log(querySnapshot.docs);
-                var product_template = $('#product_template').html();
-                var html = ejs.render(product_template, { product: querySnapshot.docs });
-                $('#product').html(html);
-              })
-              .catch(function (error) {
-                console.log("Error getting documents: ", error);
-              });
-          }
-          // doc.data() is never undefined for query doc snapshots
-          // var product_template = $('#product_template').html();
-          // console.log(querySnapshot.docs);
-          // var html = ejs.render(product_template, { product: querySnapshot.docs });
-          // $('#product').html(html);
-        })
+      localStorage.clear();
     }
-  }
-  function changeTab(name) {
-    console.log(name)
-    document.getElementById('tabbar').setActiveTab(2);
-    localStorage.setItem('name', name);
-    // var name1 = localStorage.getItem('name');
-    //  getproductData(name1)
-  }
-  function detail(pid) {
-    localStorage.setItem('id', pid);
-    myNavigator.pushPage('tab4.html')
-    showdetail()
-    // var name1 = localStorage.getItem('name');
-    //  getproductData(name1)
-  }
-  function showdetail() {
-    var id = localStorage.getItem('id');
-    db.collection("PRODUCT").where("pid", "==", id).get()
-      .then(function (querySnapshot) {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(querySnapshot.docs);
-        var detail_template = $('#detail_template').html();
-        var html = ejs.render(detail_template, { detail: querySnapshot.docs });
-        $('#detail').html(html);
-      })
-      .catch(function (error) {
-        console.log("Error getting documents: ", error);
+
+    function search(search) {
+
+      const filterItems = (needle, heystack) => {
+        let query = needle.toLowerCase();
+        return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
+      }
+      console.log("55+", filterItems(search, data));
+      var item = filterItems(search, data);
+      console.log("xxx", item)
+      localStorage.setItem('items', item);
+
+      console.log('tong', item);
+      test(item);
+      document.getElementById('tabbar').setActiveTab(2);
+      // localStorage.setItem('title', item);
+    }
+    const data = []
+
+    function tatol() {
+      console.log(search);
+      db.collection("PRODUCT").get()
+        .then(function (querySnapshot) {
+          querySnapshot.docs.forEach(function (item) {
+            data.push(item)
+            console.log(data)
+          });
+
+        })
+      // const fruits = data[1];
+    }
+    var dataCart = [];
+
+    function addtocart(add2cart) {
+      localStorage.clear('quentinTarantino');
+      localStorage.setItem('quentinTarantino', add2cart);
+      var retrievedData = localStorage.getItem("quentinTarantino");
+      console.log(retrievedData);
+      dataCart.push(retrievedData);
+      alert(dataCart);
+    }
+
+    function test(title) {
+      console.log("888", title);
+      // for(var i =0;i<tests.length;i++){
+
+
+      console.log('tset', title);
+      // doc.data() is never undefined for query doc snapshots
+
+      var product_template = $('#product_template').html();
+      var html = ejs.render(product_template, {
+        product: title
       });
-    localStorage.clear();
-  }
-  
-  function search(search) {
-   
-   const filterItems = (needle, heystack) => {
-    let query = needle.toLowerCase();
-    return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
-  }
-  console.log("55+", filterItems(search, data));
-  var item=filterItems(search, data);
-  console.log("xxx",item)
-  localStorage.setItem('items', item);
-  
-  console.log('tong',item);
-test(item);
-document.getElementById('tabbar').setActiveTab(2);
-    // localStorage.setItem('title', item);
-  }
-  const data = []
-  function tatol() {
-    console.log(search);
-    db.collection("PRODUCT").get()
-      .then(function (querySnapshot) {
-        querySnapshot.docs.forEach(function (item) {
-          data.push(item)
-          console.log(data)
-        });
-        
+      $('#product').html(html);
+
+      // console.log(tests)
+      // db.collection("PRODUCT").where("title", "==",tests).get()
+      //       .then(function (querySnapshot) {
+      //         // doc.data() is never undefined for query doc snapshots
+      //         console.log(querySnapshot.docs);
+      //         var test_template = $('#test_template').html();
+      //         var html = ejs.render(test_template, { test: querySnapshot.docs });
+      //         $('#test').html(html);
+      //       })
+      //       .catch(function (error) {
+      //         console.log("Error getting documents: ", error);
+      //       });
+      // }}
+    }
+    var dataCart = [];
+
+    function addtocart(add2cart) {
+      localStorage.clear('quentinTarantino');
+      localStorage.setItem('quentinTarantino', add2cart);
+      var retrievedData = localStorage.getItem("quentinTarantino");
+      console.log(retrievedData);
+      dataCart.push(retrievedData);
+
+      alert(dataCart);
+    }
+    //????????? array ??????????????? firebase ?????????????????? template
+
+    function getData2cart() {
+
+      var Delete = []
+      document.getElementById('pic').innerHTML = ""
+      console.log(dataCart);
+      var j = 0
+      dataCart.forEach(function (remove) {
+        Delete.push(j)
+        console.log(Delete)
+        j++
+      });
+      var testnum = 0;
+      dataCart.forEach(function (dataCart) {
+        var apr = db.collection("PRODUCT").where("pid", "==", dataCart);
+        apr.get().then(function (querySnapshot) {
+          console.log(querySnapshot.docs)
+          var pic_template = $('#pic_template').html();
+          var html = ejs.render(pic_template, {
+            cart: querySnapshot.docs,
+            num: testnum
+          });
+          console.log(html);
+
+
+
+          $('#pic').append(html);
+          testnum = testnum + 1;
+        })
       })
-    // const fruits = data[1];
-  }
-  var dataCart = [];
-function addtocart(add2cart){
-  localStorage.clear('quentinTarantino');
-localStorage.setItem('quentinTarantino',add2cart);
-var retrievedData = localStorage.getItem("quentinTarantino");
-console.log(retrievedData);
-dataCart.push(retrievedData);
-alert(dataCart);
-}
 
-function test(title){
-console.log("888",title);
-// for(var i =0;i<tests.length;i++){
-    
- 
-    console.log('tset',title);
-        // doc.data() is never undefined for query doc snapshots
-        
-        var product_template = $('#product_template').html();
-         var html = ejs.render(product_template, { product: title });
-        $('#product').html(html);
-  
-// console.log(tests)
-// db.collection("PRODUCT").where("title", "==",tests).get()
-//       .then(function (querySnapshot) {
-//         // doc.data() is never undefined for query doc snapshots
-//         console.log(querySnapshot.docs);
-//         var test_template = $('#test_template').html();
-//         var html = ejs.render(test_template, { test: querySnapshot.docs });
-//         $('#test').html(html);
-//       })
-//       .catch(function (error) {
-//         console.log("Error getting documents: ", error);
-//       });
-// }}
- }
- var dataCart = [];
-function addtocart(add2cart){
-  localStorage.clear('quentinTarantino');
-localStorage.setItem('quentinTarantino',add2cart);
-var retrievedData = localStorage.getItem("quentinTarantino");
-console.log(retrievedData);
-dataCart.push(retrievedData);
-
-alert(dataCart);
-}
-//????????? array ??????????????? firebase ?????????????????? template
-
-function getData2cart(){
-  
-  var Delete=[]
-  document.getElementById('pic').innerHTML=""
-  console.log(dataCart);
-  var j=0
-  dataCart.forEach(function(remove) {
-    Delete.push(j)
-    console.log(Delete)
-    j++
-  });
-var testnum = 0;
-  dataCart.forEach(function(dataCart){
-    var apr = db.collection("PRODUCT").where("pid","==",dataCart);
-    apr.get().then(function (querySnapshot) {
-      console.log(querySnapshot.docs)
-      var pic_template = $('#pic_template').html();
-      var  html = ejs.render(pic_template, { cart: querySnapshot.docs,num:testnum });
-      console.log(html);
-
-     
-      
-     $('#pic').append(html);
-        testnum = testnum +1;
-    })  
-  })
- 
-}
-</script>
+    }
+  </script>
 
 </html>
