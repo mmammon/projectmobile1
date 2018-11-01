@@ -45,7 +45,7 @@
   <ons-navigator swipeable id="myNavigator" page="tab3.html">
     <ons-page>
 
-      <ons-toolbar>
+      <ons-toolbar style="background: rgb(214, 239, 255);">
         <div class="left">
           <ons-toolbar-button>
             <ons-icon icon="fa-shopping-bag"></ons-icon>
@@ -61,11 +61,11 @@
       </ons-toolbar>
 
       <ons-tabbar swipeable position="auto" id="tabbar">
-        <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Cart" icon="md-shopping-cart" active-icon="md-shopping-cart">
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab2.html" label="Cart" icon="md-shopping-cart" active-icon="md-shopping-cart">
         </ons-tab>
-        <ons-tab page="tab3.html" label="product" icon="md-shopping-cart" active-icon="md-shopping-cart">
+        <ons-tab style="background: rgb(214, 239, 255);" page="tab3.html" label="product" icon="md-shopping-cart" active-icon="md-shopping-cart">
         </ons-tab>
        
       </ons-tabbar>
@@ -117,6 +117,9 @@
       </div>
 
       <style type="text/css">
+      *{
+font-family: 'Times New Roman', Times, serif;
+      }
         .recomended_playlist {
           padding-left: 10px;
         }
@@ -162,7 +165,7 @@
         .category_wrapper {
           width: 90%;
           margin: auto;
-          background-color: #7CB4D4;
+          background-color: rgb(62, 184, 255);
           border: 5px solid;
           border-color: white;
         }
@@ -184,7 +187,7 @@
         .category_wrapper2 {
           width: 90%;
           margin: auto;
-          background-color: rgba(65, 65, 65, 0.815);
+          background-color: rgba(201, 25, 25, 0.815);
         }
         .category_wrapper2 ons-icon {
           font-size: 55px;
@@ -206,7 +209,7 @@
 
   <template id="tab2.html">
     <ons-page id="Tab2">
-      <ons-list-header>SHOPPING CART</ons-list-header>
+      <ons-list-header">SHOPPING CART</ons-list-header>
 
       <div id="pic"></div>
         <script id="pic_template" type="text/template"> 
@@ -232,7 +235,7 @@
       </div>
 
 
-      <ons-button modifier="large">PROCEED TO PAY</ons-button>
+      <ons-button modifier="large" style="font-weight: bold;">PROCEED TO PAY</ons-button>
 
     </ons-page>
   </template>
@@ -251,9 +254,11 @@
   <ons-card onclick="detail('<%- products.pid %>')">
     <img class="" src="<%= products.pic %>" width="99%"height="70px">
         <br>
+        <div style="font-size:10px"> 
 <%= products.Category %><br>
 <%= products.title %><br>
 ฿<%= products.price %>
+</div>
   </ons-card></ons-col>
 
 <%});%> 
@@ -271,7 +276,7 @@
     <ons-page>
       <ons-toolbar>
         <div class="left">
-          <ons-back-button>Page 1</ons-back-button>
+          <ons-back-button>Back</ons-back-button>
         </div>
         <div class="center"></div>
       </ons-toolbar>
@@ -281,16 +286,17 @@
          
          <% detail.forEach(function(data){   
           var data = data.data(); %>
-          <div class="title">
+          <img class="" src="<%= data.pic %>" width="50%"height="50%">
+          <div class="title" style="font-size:20px; font-col">
+            <%= data.title %>
+          </div>
+          <div class="price" style="font-size:18px;">
             <%= data.price%>
           </div>
-          <div class="content" style="color: white;">
-            <div>
-              <%= data.title %>
-            </div>
-
+          <div class="detail" style="font-size:15px;">
+            <%= data.detail%>
           </div>
-          <ons-button onclick="addtocart('<%= data.pid %>')">ADD TO CART</ons-button>
+          <br><ons-button onclick="addtocart('<%= data.pid %>')">ADD TO CART</ons-button>
           <%})%>
         </ons-card>
      
@@ -419,7 +425,7 @@
       db.collection("PRODUCT").where("category", "==",name).get()
         .then(function (querySnapshot) {console.log(querySnapshot.docs);
           if (querySnapshot.docs.length == 0) {
-            var html = "ไม่มีสินค้าที่คุณเลือก"
+            var html = "No product for your search"
             db.collection("PRODUCT").get()
               .then(function (querySnapshot) {
                 // doc.data() is never undefined for query doc snapshots
